@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that configures a new Ubuntu machine
+sudo apt update
+sudo apt install -y nginx
+cd /var/www/
+sudo chmod 777 html
+echo 'Hello World!' > html/index.html
+sudo chmod 755 html
+cd ~
+sudo service nginx restart
